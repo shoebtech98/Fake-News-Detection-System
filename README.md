@@ -185,8 +185,3 @@ The `data/` directory is not committed to this repository. See the Kaggle link a
 
 ---
 
-## Built By
-
-**Dhruv** — B.Tech Mathematics & Scientific Computing, IIITM Gwalior (Batch 2023)
-
-College club project — Devkriti'26
