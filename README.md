@@ -116,7 +116,6 @@ LIME (Local Interpretable Model-agnostic Explanations) applied to both models, i
 - Side-by-side comparison of classical vs transformer explanations
 - Analysis of model disagreements and misclassified examples
 
-> Coming in Week 4.
 
 ---
 
