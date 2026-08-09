@@ -2,8 +2,6 @@
 
 *Fake news classification using TF-IDF and fine-tuned RoBERTa-base, with LIME explainability and a Gradio demo. Built on WELFake (72k articles).*
 
----
-
 <p align="center">
   <a href="#results">Results</a> •
   <a href="#methodology">Methodology</a> •
