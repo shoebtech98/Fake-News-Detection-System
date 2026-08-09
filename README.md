@@ -1,18 +1,6 @@
 # Fake News Detection
 
 <p align="center">
-  <img src="assets/project_banner.png" alt="Fake News Detection" width="100%">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12+-blue?style=flat-square&logo=python" />
-  <img src="https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch" />
-  <img src="https://img.shields.io/badge/HuggingFace-Transformers-FFD21E?style=flat-square&logo=huggingface" />
-  <img src="https://img.shields.io/badge/Gradio-Demo-FF7C00?style=flat-square" />
-  <img src="https://img.shields.io/badge/Model-RoBERTa--base-8A2BE2?style=flat-square" />
-</p>
-
-<p align="center">
   <a href="#results">Results</a> •
   <a href="#methodology">Methodology</a> •
   <a href="#project-structure">Structure</a> •
@@ -22,7 +10,7 @@
 
 ---
 
-A binary fake news classifier built on the WELFake dataset. Implements a classical TF-IDF + Logistic Regression baseline alongside a fine-tuned RoBERTa-base model, with LIME-based explainability and a Gradio demo.
+*Fake news classification using TF-IDF and fine-tuned RoBERTa-base, with LIME explainability and a Gradio demo. Built on WELFake (72k articles).*
 
 ---
 
@@ -93,7 +81,7 @@ Both models were trained on this final semantically-deduplicated dataset to ensu
 - Full fine-tune (all encoder layers unfrozen)
 - Dynamic padding via `DataCollatorWithPadding`
 - 3 epochs, early stopping on validation loss
-- Trained on Kaggle GPU (T4)
+- Trained on RTX 5060
 
 **Training curve:**
 
@@ -113,7 +101,6 @@ LIME (Local Interpretable Model-agnostic Explanations) applied to both models, i
 - Token-level attribution for RoBERTa
 - Side-by-side comparison of classical vs transformer explanations
 - Analysis of model disagreements and misclassified examples
-
 
 ---
 
@@ -181,4 +168,3 @@ WELFake dataset via Kaggle: [saurabhshahane/fake-news-classification](https://ww
 The `data/` directory is not committed to this repository. See the Kaggle link above.
 
 ---
-
