@@ -53,8 +53,6 @@ Actual Real           7             4279
 
 > RoBERTa makes 11 errors on 9,462 test samples.
 
-> **Note:** A class imbalance exists in the deduplicated dataset (34.5k fake vs 28.6k real). This is reflected in the TF-IDF results and will be addressed with class weighting in a future update.
-
 ---
 
 ## Methodology
