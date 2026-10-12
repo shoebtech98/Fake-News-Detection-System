@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title description">
+  <title id="title">SignalCheck project workflow</title>
+  <desc id="description">Articles pass through cleaning and duplicate checks, three model experiments, and saved evaluation reports. Sample mode is an offline smoke test; full mode uses WELFake.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#101a37"/>
+      <stop offset="1" stop-color="#172d48"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#66d9c2" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="400" rx="24" fill="url(#background)"/>
+  <text x="48" y="57" fill="#f5f8ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">How SignalCheck works</text>
+  <text x="48" y="85" fill="#adbed3" font-family="Arial, sans-serif" font-size="16">A reproducible path from article text to saved evaluation files</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="48" y="118" width="245" height="156" rx="17" fill="#223753" stroke="#385473"/>
+    <circle cx="79" cy="153" r="15" fill="#66d9c2"/>
+    <text x="74" y="159" fill="#102238" font-size="16" font-weight="700">1</text>
+    <text x="105" y="160" fill="#f5f8ff" font-size="19" font-weight="700">Load articles</text>
+    <text x="69" y="198" fill="#c5d3e3" font-size="15">Sample CSV or WELFake</text>
+    <text x="69" y="225" fill="#c5d3e3" font-size="15">Clean text and check splits</text>
+    <text x="69" y="252" fill="#c5d3e3" font-size="15">for duplicate articles</text>
+
+    <rect x="340" y="118" width="245" height="156" rx="17" fill="#223753" stroke="#385473"/>
+    <circle cx="371" cy="153" r="15" fill="#66d9c2"/>
+    <text x="366" y="159" fill="#102238" font-size="16" font-weight="700">2</text>
+    <text x="397" y="160" fill="#f5f8ff" font-size="19" font-weight="700">Train models</text>
+    <text x="361" y="198" fill="#c5d3e3" font-size="15">TF-IDF + logistic regression</text>
+    <text x="361" y="225" fill="#c5d3e3" font-size="15">RoBERTa: exact deduplication</text>
+    <text x="361" y="252" fill="#c5d3e3" font-size="15">RoBERTa: prepared data</text>
+
+    <rect x="632" y="118" width="245" height="156" rx="17" fill="#223753" stroke="#385473"/>
+    <circle cx="663" cy="153" r="15" fill="#66d9c2"/>
+    <text x="658" y="159" fill="#102238" font-size="16" font-weight="700">3</text>
+    <text x="689" y="160" fill="#f5f8ff" font-size="19" font-weight="700">Evaluate</text>
+    <text x="653" y="198" fill="#c5d3e3" font-size="15">Accuracy and macro F1</text>
+    <text x="653" y="225" fill="#c5d3e3" font-size="15">Confusion matrix</text>
+    <text x="653" y="252" fill="#c5d3e3" font-size="15">Prediction CSV and report</text>
+
+    <rect x="924" y="118" width="228" height="156" rx="17" fill="#223753" stroke="#385473"/>
+    <circle cx="955" cy="153" r="15" fill="#66d9c2"/>
+    <text x="950" y="159" fill="#102238" font-size="16" font-weight="700">4</text>
+    <text x="981" y="160" fill="#f5f8ff" font-size="19" font-weight="700">Use a saved model</text>
+    <text x="945" y="198" fill="#c5d3e3" font-size="15">Classify article text with</text>
+    <text x="945" y="225" fill="#c5d3e3" font-size="15">the prediction CLI after</text>
+    <text x="945" y="252" fill="#c5d3e3" font-size="15">a RoBERTa training run</text>
+
+    <path d="M300 196 H328 M592 196 H620 M884 196 H912" stroke="#66d9c2" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <rect x="48" y="310" width="1104" height="50" rx="12" fill="#142944" stroke="#385473"/>
+    <text x="70" y="342" fill="#7ee2d0" font-size="16" font-weight="700">SAMPLE MODE</text>
+    <text x="202" y="342" fill="#c5d3e3" font-size="15">Offline smoke test with fictional articles</text>
+    <text x="633" y="342" fill="#7ee2d0" font-size="16" font-weight="700">FULL MODE</text>
+    <text x="747" y="342" fill="#c5d3e3" font-size="15">WELFake training on a CUDA GPU</text>
+  </g>
+</svg>

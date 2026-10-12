@@ -4,7 +4,7 @@
 
 Maintained by **Mohammed Shoaib** · [GitHub profile](https://github.com/shoebtech98)
 
-[Quick start](#quick-start) · [Use WELFake](#use-the-welfake-dataset) · [Results](#results) · [Project layout](#project-layout)
+[Features](#features) · [Quick start](#quick-start) · [Use WELFake](#use-the-welfake-dataset) · [Results](#results) · [Project layout](#project-layout)
 
 > [!IMPORTANT]
 > The bundled articles are **fictional test data**. They let you run every notebook without a dataset download or GPU, but their scores do **not** measure real-world accuracy.
@@ -12,6 +12,22 @@ Maintained by **Mohammed Shoaib** · [GitHub profile](https://github.com/shoebte
 ## Overview
 
 SignalCheck compares a TF-IDF and logistic regression baseline with two RoBERTa workflows. Shared code in `src/pipeline.py` handles loading, stratified splitting, training, evaluation, and output files.
+
+![Diagram of the SignalCheck data, training, evaluation, and prediction workflow](assets/workflow.svg)
+
+## Features
+
+| Feature | What it does |
+| --- | --- |
+| Three executable notebooks | Runs a TF-IDF baseline and two RoBERTa experiments with visible cell outputs. |
+| Two data modes | Starts with fictional offline sample data; switches to WELFake for full experiments. |
+| Duplicate safeguards | Removes duplicate article text and checks for overlap across train, validation, and test splits. |
+| Reusable results | Saves metrics, classification reports, and per-article predictions for each experiment. |
+| Prediction command | Classifies new text with a saved RoBERTa model after training. |
+
+The diagram shows the implemented workflow; it is an illustration of the code, not a screenshot of a web application.
+
+## Notebooks
 
 | Notebook | Workflow | Full-data input |
 | --- | --- | --- |
