@@ -1,1 +1,11 @@
-
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+data/raw/*.csv
+data/processed/*.csv
+saved_models/
+models/**/*.bin
+models/**/*.safetensors
+models/sample/
+models/full/
+results/full/
